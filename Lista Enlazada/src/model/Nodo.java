@@ -29,4 +29,5 @@ public class Nodo<T> {
     public void setNext(Nodo next) {
         this.next = next;
     }
+
 }
