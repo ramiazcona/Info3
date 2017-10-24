@@ -31,4 +31,23 @@ public class BinaryTree <T extends Comparable>{
         }
     }
 
+    public int depth(){
+        if(root == null){
+            return 0;
+        }
+        else{
+            return root.height(root);
+        }
+    }
+
+    public void delete(T dat){
+        if(root != null){
+            if(root.getDat().compareTo(dat) == 0){
+                root = null;
+            }
+            else{
+                root.delete(root,dat);
+            }
+        }
+    }
 }
